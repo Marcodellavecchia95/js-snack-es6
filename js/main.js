@@ -49,12 +49,12 @@ const squadre = [
   },
 ];
 
-console.log(squadre[0].puntiFatti);
-
 let newArray = [];
 
 for (let i = 0; i < squadre.length; i++) {
-  newArray.push(squadre[i].nome);
-  newArray.push(squadre[i].falliSubiti);
+  let squadra = [
+    { nome: squadre[i].nome, falliSubiti: squadre[i].falliSubiti },
+  ];
+  newArray = squadra;
   console.log(newArray);
 }
