@@ -3,23 +3,23 @@
 // Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 // Stampare a schermo la bici con peso minore.
 
-// const biciLeggeraEL = document.getElementById("bici-leggera");
-// const bici = [
-//   {
-//     nome: "mountain bike",
-//     peso: 60,
-//   },
-//   { nome: "trial bike", peso: 50 },
+const biciLeggeraEL = document.getElementById("bici-leggera");
+const bici = [
+  {
+    nome: "mountain bike",
+    peso: 60,
+  },
+  { nome: "trial bike", peso: 50 },
 
-//   { nome: "running bike", peso: 40 },
-// ];
-// let biciLeggera = bici[0];
-// for (let i = 0; i < bici.length; i++) {
-//   if (bici[i].peso < biciLeggera.peso) {
-//     biciLeggera = bici[i];
-//     biciLeggeraEL.innerText = `La bici più leggera è: ${biciLeggera.nome} grazie al suo peso di soli ${biciLeggera.peso} Kg`;
-//   }
-// }
+  { nome: "running bike", peso: 40 },
+];
+let biciLeggera = bici[0];
+for (let i = 0; i < bici.length; i++) {
+  if (bici[i].peso < biciLeggera.peso) {
+    biciLeggera = bici[i];
+  }
+}
+biciLeggeraEL.innerText = `La bici più leggera è: ${biciLeggera.nome} grazie al suo peso di soli ${biciLeggera.peso} Kg`;
 
 // Snack2
 // Creare un array di oggetti di squadre di calcio.
@@ -49,12 +49,12 @@ const squadre = [
   },
 ];
 
-let newArray = [];
+const newArray = [];
 
 for (let i = 0; i < squadre.length; i++) {
-  let squadra = [
-    { nome: squadre[i].nome, falliSubiti: squadre[i].falliSubiti },
-  ];
-  newArray = squadra;
-  console.log(newArray);
+  newArray.push({
+    nome: squadre[i].nome,
+    falliSubiti: squadre[i].falliSubiti,
+  });
 }
+console.log(newArray);
